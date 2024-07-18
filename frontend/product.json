@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "name": "Abhayarishta",
+         "quantity":"200ml",
+        "price": 120,
+        "image": "ayurvedic/a1.png"
+    },
+    {
+        "id": 2,
+        "name": "Amritarishta",
+        "quantity":"200ml",
+        "price": 190,
+        "image": "ayurvedic/Amritarishta.png"
+    },
+    {
+        "id": 3,
+        "name": "Ashokarishta",
+        "quantity":"200ml",
+        "price": 100,
+        "image": "ayurvedic/a3.png"
+    }
+    ,
+    {
+        "id": 4,
+        "name": "Balarishta",
+        "quantity":"450ml",
+        "price": 155,
+        "image": "ayurvedic/b1.png"
+    },
+    {
+        "id": 5,
+        "name": "Chandanasava",
+        "quantity":"450ml",
+        "price": 162,
+        "image": "ayurvedic/c4.png"
+    },
+    {
+        "id": 6,
+        "name": "Draksharishta",
+        "quantity":"450ml",
+        "price": 340,
+        "image": "ayurvedic/d4.png"
+    },
+    {
+        "id": 7,
+        "name": "Ashvagandha Tablets",
+        "quantity":"60 Tablets",
+        "price": 250,
+        "image": "ayurvedic/h2.png"
+    },
+    {
+        "id": 8,
+        "name": "Immunity Booster",
+        "quantity":"50 Tablets",
+        "price": 150,
+        "image": "ayurvedic/v4.png"
+    },
+    {
+        "id": 9,
+        "name": "Vitamin D3",
+        "quantity":"70 Tablets",
+        "price": 399,
+        "image": "ayurvedic/v7.png"
+    }
+  
+]

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="csss/aboutme.css">
+</head>
+<body>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+    <style>
+        *{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/back4.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: "Poppins",sans-serif;
+}
+.container{
+    margin:20px 40px;
+    color:white;
+}
+.heading{
+    font-size: 40px;
+    font-family:'Poppins', cursive;
+    color:white;
+}
+.heading span{
+    font-style:italic;
+    font-size: 30px;
+
+}
+.profiles{
+   float: left;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-around;
+    
+    margin:20px 80px;
+
+}
+
+.profile{
+    flex-basis:260px;
+}
+.profile .profile-img{
+    
+    height: 180px;
+    width:180px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    cursor:pointer;
+    transition:400ms;
+}
+
+.profile:hover .profile-img{
+    filter:grayscale(0);
+}
+
+.user-name{
+    margin-top: 30px;
+    font-size:35px;
+}
+.profile h5{
+    font-size:18px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color:#ccc;
+
+}
+
+.profile p{
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify;
+
+}
+    </style>
+   
+    <div class="wrapper">
+        <div class="title">
+            <!-- <h1>About Us</h1> -->
+            <h1>
+           <u>     <span>About</span> <span>Us</span></span></u>
+            </h1>
+  
+          <i>  <center> <h2>"Empowering Health, One Delivery at a Time"</h2></center></i>
+        </div>
+        <div class="about">
+            <div class="image-section">
+                <img src="images/hhlo.png" >
+            </div>
+            <article>
+                <h3>At HealthHub, we are dedicated to providing the highest quality pharmaceutical products and healthcare solutions to our valued customers. With a commitment to excellence, safety, and affordability, we have become a trusted destination for all your healthcare needs.</h3>
+                <p> </p>
+                <div class="button">
+                    <a href="">Learn More</a>
+                </div>
+            </article>
+        </div>
+    </div>
+   
+    <br>
+    <br>
+    <div class="inform" id="i1">
+        <head>
+    
+     <link rel="stylesheet" href="info.css">
+        </head>
+       <body style="background-image: url('images/back6.jpeg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+        <div class="container">
+            <h1 class="heading">Meet Our Customers</h1>
+            <div class="profiles">
+                <div class="profile">
+                    <img src="images/image1.jpeg" class="profile-img">
+                <h3 class="user-name"></h3>
+                <h5></h5>
+                
+                
+                </div>
+            </div>
+            <div class="profiles">
+                <div class="profile">
+                    <img src="images/image2.jpeg" class="profile-img">
+                <h3 class="user-name"></h3>
+                <h5></h5>
+                
+                
+                </div>
+            </div>
+            <div class="profiles">
+                <div class="profile">
+                    <img src="images/image3.jpeg" class="profile-img">
+                <h3 class="user-name"></h3>
+                <h5></h5>
+              
+                
+                </div>
+            </div>
+        </div>
+    </body>
+    </div>
+  
+    <br>
+    <br>
+    
+    
+    <script>
+        // let slideIndex = 1;
+// showSlides(slideIndex);
+// function plusSlides(n) 
+// {
+//     showSlides(slideIndex+=n);
+// }
+// function currentSlide(n) 
+// {
+//     showSlides(slideIndex=n);
+// }
+// function showSlides(n) 
+// {
+//     let i; 
+//     let slides = document.getElementsByClassName("mySlides");
+//     let dots = document.getElementsByClassName("dot");
+//     if(n>slides.length) {slideIndex = 1}
+//     if(n<1) {slideIndex=slide.length}
+//     for(i=0;i<slides.length;i++)
+//     {
+//         slides[i].style.display = "none";
+//     }
+//     for(i=0; i<dots.length;i++)
+//     {
+//         dots[i].className = dots[i].className.replace("active","")
+//     }
+//     slides[slideIndex-1].style.display = "block";
+//     dots[slideIndex-1].className+= "active";
+// }
+(function() {
+
+    init(); //on page load - show first slide, hidethe rest
+  
+    function init() {
+  
+      parents = document.getElementsByClassName('slideshow-container');
+  
+      for (j = 0; j < parents.length; j++) {
+        var slides = parents[j].getElementsByClassName("mySlides");
+        var dots = parents[j].getElementsByClassName("dot");
+        slides[0].classList.add('active-slide');
+        dots[0].classList.add('active');
+      }
+    }
+  
+    dots = document.getElementsByClassName('dot'); //dots functionality
+  
+    for (i = 0; i < dots.length; i++) {
+  
+      dots[i].onclick = function() {
+  
+        slides = this.parentNode.parentNode.getElementsByClassName("mySlides");
+  
+        for (j = 0; j < this.parentNode.children.length; j++) {
+          this.parentNode.children[j].classList.remove('active');
+          slides[j].classList.remove('active-slide');
+          if (this.parentNode.children[j] == this) {
+            index = j;
+          }
+        }
+        this.classList.add('active');
+        slides[index].classList.add('active-slide');
+  
+      }
+    }
+  //prev/next functionality
+    links = document.querySelectorAll('.slideshow-container a');
+  
+    for (i = 0; i < links.length; i++) {
+      links[i].onclick = function() {
+        current = this.parentNode;
+  
+        var slides = current.getElementsByClassName("mySlides");
+        var dots = current.getElementsByClassName("dot");
+        curr_slide = current.getElementsByClassName('active-slide')[0];
+        curr_dot = current.getElementsByClassName('active')[0];
+        curr_slide.classList.remove('active-slide');
+        curr_dot.classList.remove('active');
+        if (this.className == 'next') {
+  
+          if (curr_slide.nextElementSibling.classList.contains('mySlides')) {
+            curr_slide.nextElementSibling.classList.add('active-slide');
+            curr_dot.nextElementSibling.classList.add('active');
+          } else {
+            slides[0].classList.add('active-slide');
+            dots[0].classList.add('active');
+          }
+  
+        }
+  
+        if (this.className == 'prev') {
+  
+          if (curr_slide.previousElementSibling) {
+            curr_slide.previousElementSibling.classList.add('active-slide');
+            curr_dot.previousElementSibling.classList.add('active');
+          } else {
+            slides[slides.length - 1].classList.add('active-slide');
+            dots[slides.length - 1].classList.add('active');
+          }
+  
+        }
+  
+      }
+  
+    }
+  })();
+    </script>
+  
+    </body>
+    </html>

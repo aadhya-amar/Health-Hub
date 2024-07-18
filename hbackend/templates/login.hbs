@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    {{!-- <link rel="stylesheet" href="templates/css/login.css"> --}}
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+ 
+ * {
+   box-sizing: border-box;
+   font-family: 'Quicksand', sans-serif;
+ }
+  
+ html,
+ body {
+   margin: 0;
+ }
+  
+ .full-screen-container {
+   background-image: url('https://i.pinimg.com/originals/7b/98/6d/7b986dc15f38fa888104b0efeadbfa9c.jpg');
+   height: 100vh;
+   width: 100vw;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+  
+ .login-container {
+   background-color: hsla(201, 100%, 6%, 0.6);
+   padding: 50px 30px;
+   min-width: 400px;
+   width: 50%;
+   max-width: 600px;
+ }
+  
+ .login-title {
+   color: #fff;
+   text-align: center;
+   margin: 0;
+   margin-bottom: 40px;
+   font-size: 2.5em;
+   font-weight: normal;
+ }
+  
+ .input-group {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 20px;
+ }
+  
+ .input-group label {
+   color: #fff;
+   font-weight: lighter;
+   font-size: 1.5em;
+   margin-bottom: 7px;
+ }
+  
+ .input-group input {
+   font-size: 1.5em;
+   padding: 0.1em 0.25em;
+   background-color: hsla(201, 100%, 91%, 0.3);
+   border: 1px solid hsl(201, 100%, 6%);
+   outline: none;
+   border-radius: 5px;
+   color: #fff;
+   font-weight: lighter;
+ }
+  
+ .input-group input:focus {
+   border: 1px solid hsl(201, 100%, 50%);
+ }
+  
+ .login-button {
+   padding: 10px 30px;
+   width: 100%;
+   border-radius: 5px;
+   background: hsla(201, 100%, 50%, 0.1);
+   border: 1px solid hsl(201, 100%, 50%);
+   outline: none;
+   font-size: 1.5em;
+   color: #fff;
+   font-weight: lighter;
+   margin-top: 20px;
+   cursor: pointer;
+ }
+  
+ .login-button:hover {
+   background-color: hsla(201, 100%, 50%, 0.3);
+ }
+  
+ .login-button:focus {
+   background-color: hsla(201, 100%, 50%, 0.5);
+ }
+    /* *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    place-items: center;
+}
+
+h1{
+    /* color: rgb(223, 155, 52); */
+    /* margin-top: 20vh;
+    margin-bottom: 30px;
+
+}
+input{
+    font-size: 1rem;
+    width: 300px;
+    padding: 6px 2px; 
+    margin: 10px 0 10px 0;
+}
+.sub{
+    background-color:rgb(223, 155, 52);
+    cursor: pointer;
+}
+
+form{
+    /* margin-top: 20vh; */
+    /* text-align: center;
+    border: 5px solid rgb(111, 70, 23);
+    padding: 20px;
+    background-color: rgb(239, 192, 135);
+} */
+
+</style> 
+
+<body>
+    <div class="full-screen-container">
+        <div class="login-container">
+          <h3 class="login-title">Welcome To Health Hub</h3>
+          <form action="/login"  method="post" >
+            <div class="input-group">
+              <label>Email</label>
+              <input placeholder="Name" name="name" type="text">
+            </div>
+            <div class="input-group">
+              <label>Password</label>
+              <input placeholder="Password" name="password" type="password">
+            </div>
+            <input class="sub" type="submit">
+            {{#if msg}}
+            <h3>{{msg}}</h3>
+           <a href="/signup">Create a new account</a>
+           {{/if}}
+           {{#if credentialmsg}}
+            <h3>{{credentialmsg}}</h3>
+           {{/if}}
+          </form>
+        </div>
+      </div>
+
+
+    
+
+    
+</body>
+</html>
